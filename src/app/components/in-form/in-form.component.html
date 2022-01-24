@@ -1,0 +1,22 @@
+<div class="divForm">
+    <form class="clsForm">
+        
+        <label> </label>
+        <span class="currency">$</span>
+        <input id="fAmount" type="number" min="1" value="100" #nums (input)="this.setDollarValue(nums.value)">
+        
+        <label>In </label>
+        <input id="fYear" type="number" 
+        min="{{this.startMinYear}}" max="{{this.startMaxYear}}" value="{{this.getStartValueYear()}}" 
+        #n2 (input)="setStartValueYear(n2.value)" (change)="setStartValueYear(n2.value)" >
+
+        will be worth <span id="dollars">{{this.getMonetaryChange() | dollar }}</span>
+
+        <label>in</label>
+        <input id="endYear" type="number" min="{{this.startMinYear}}" max="{{this.startMaxYear}}" value="{{this.startMaxYear}}"
+        #n3 (input)="setEndValueYear(n3.value)" (change)="setEndValueYear(n3.value)">
+    </form>
+
+    <p>This is a cumulative inflaition of <span id="perc">{{this.getPercentage()*100 | percentagePipe  }}</span>.</p>
+
+</div>

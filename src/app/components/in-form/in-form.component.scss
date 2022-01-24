@@ -1,0 +1,25 @@
+.clsForm {
+
+    .currency {
+        position: relative;
+        left: 12px;
+    }
+
+    input {
+        border-radius: 5px;
+        border-color: white;
+        height: 2em;
+        text-indent: 10px;
+    }
+
+    #dollars {
+        color:#20a7e2;
+        font-size: 20px;
+        font-weight: 100;
+    }
+    
+}
+
+#perc {
+    font-weight: bold;
+}
